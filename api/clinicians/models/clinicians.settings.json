@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "clinicians",
+  "info": {
+    "name": "clinicians",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "users_permissions_user": {
+      "unique": true,
+      "private": true,
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "avatar": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "profile_json": {
+      "type": "json"
+    },
+    "orgainsation": {
+      "model": "orgainsations"
+    },
+    "fullname": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "lastGroupAccessed": {
+      "type": "string"
+    },
+    "isProfileUpdated": {
+      "type": "boolean",
+      "default": false
+    },
+    "dob": {
+      "type": "date"
+    }
+  }
+}

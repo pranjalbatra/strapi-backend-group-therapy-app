@@ -1,0 +1,13 @@
+{
+    "routes": [
+      {
+        "method": "POST",
+        "path": "/zoomtest",
+        "handler": "zoom-service.test",
+        "config": {
+          "policies": []
+        }
+      }
+    ]
+}
+  

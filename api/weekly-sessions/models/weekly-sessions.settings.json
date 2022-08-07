@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "weekly_sessions",
+  "info": {
+    "name": "weekly_sessions",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "week_number": {
+      "type": "integer"
+    },
+    "locked": {
+      "type": "boolean",
+      "default": false
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "presession_richtext": {
+      "type": "richtext"
+    },
+    "preesession_json": {
+      "type": "json"
+    },
+    "homework_richtext": {
+      "type": "richtext"
+    },
+    "homework_json": {
+      "type": "json"
+    }
+  }
+}

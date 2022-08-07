@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "live_sessions",
+  "info": {
+    "name": "live_sessions"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "clinician_patient_group": {
+      "model": "clinician-patient-groups"
+    },
+    "sessiondata_json": {
+      "type": "json"
+    },
+    "session_start": {
+      "type": "datetime"
+    },
+    "session_end": {
+      "type": "datetime"
+    },
+    "ended": {
+      "type": "boolean"
+    }
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "kind": "collectionType",
+  "collectionName": "clinician_patient_groups",
+  "info": {
+    "name": "clinician_patient_groups",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "clinician": {
+      "model": "clinicians"
+    },
+    "group_json": {
+      "type": "json"
+    },
+    "sessionStartDate": {
+      "type": "date",
+      "required": true
+    },
+    "sessionEndDate": {
+      "type": "date"
+    },
+    "pause_date_from": {
+      "type": "date"
+    },
+    "pause_date_to": {
+      "type": "date"
+    },
+    "is_paused": {
+      "type": "boolean",
+      "default": false
+    },
+    "participants": {
+      "collection": "participants"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "sessionDay": {
+      "type": "string",
+      "required": true
+    },
+    "sessionTime": {
+      "type": "time",
+      "required": true
+    },
+    "members": {
+      "type": "json"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "current_status": {
+      "type": "enumeration",
+      "enum": [
+        "active",
+        "completed"
+      ],
+      "default": "active"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/live-sessions",
+      "handler": "live-sessions.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/live-sessions/count",
+      "handler": "live-sessions.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/live-sessions/:id",
+      "handler": "live-sessions.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/live-sessions",
+      "handler": "live-sessions.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/live-sessions/:id",
+      "handler": "live-sessions.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/live-sessions/:id",
+      "handler": "live-sessions.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

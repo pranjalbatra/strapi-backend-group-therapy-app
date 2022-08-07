@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "participants",
+  "info": {
+    "name": "Participants",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "fullname": {
+      "type": "string"
+    },
+    "profile_json": {
+      "type": "json"
+    },
+    "dob": {
+      "type": "date"
+    },
+    "users_permissions_user": {
+      "private": true,
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "isProfileUpdated": {
+      "type": "boolean",
+      "default": false
+    },
+    "isInvitationAccepted": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/clinician-assistants",
+      "handler": "clinician-assistants.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/clinician-assistants/count",
+      "handler": "clinician-assistants.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/clinician-assistants/:id",
+      "handler": "clinician-assistants.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/clinician-assistants",
+      "handler": "clinician-assistants.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/clinician-assistants/:id",
+      "handler": "clinician-assistants.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/clinician-assistants/:id",
+      "handler": "clinician-assistants.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

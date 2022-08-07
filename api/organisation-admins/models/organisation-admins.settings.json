@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "organisation_admins",
+  "info": {
+    "name": "organisation_admins"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "orgainsation": {
+      "model": "orgainsations"
+    },
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

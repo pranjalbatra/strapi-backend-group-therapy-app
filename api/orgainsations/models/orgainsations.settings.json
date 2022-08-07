@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orgainsations",
+  "info": {
+    "name": "orgainsations",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "avatar": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "address": {
+      "type": "string"
+    },
+    "details_json": {
+      "type": "json"
+    }
+  }
+}

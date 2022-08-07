@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "clinician_assistants",
+  "info": {
+    "name": "clinician_assistants"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "clinician": {
+      "model": "clinicians"
+    },
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/clinician-patient-groups",
+      "handler": "clinician-patient-groups.find",
+      "config": {
+        "policies": ["plugins::users-permissions.userValidation"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/clinician-patient-groups/count",
+      "handler": "clinician-patient-groups.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/clinician-patient-groups/:id",
+      "handler": "clinician-patient-groups.findOne",
+      "config": {
+        "policies": ["plugins::users-permissions.userValidation"]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/clinician-patient-groups",
+      "handler": "clinician-patient-groups.create",
+      "config": {
+        "policies": ["plugins::users-permissions.userValidation"]
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/clinician-patient-groups/:id",
+      "handler": "clinician-patient-groups.update",
+      "config": {
+        "policies": ["plugins::users-permissions.userValidation"]
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/clinician-patient-groups/:id",
+      "handler": "clinician-patient-groups.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

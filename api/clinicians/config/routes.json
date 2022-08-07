@@ -1,0 +1,60 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/clinicians",
+      "handler": "clinicians.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/clinicians/count",
+      "handler": "clinicians.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/clinicians/:id",
+      "handler": "clinicians.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/clinicians",
+      "handler": "clinicians.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/clinicians/updateProfile",
+      "handler": "clinicians.update",
+      "config": {
+        "policies": ["plugins::users-permissions.userValidation"]
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/clinicians/:id",
+      "handler": "clinicians.delete",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/clinicians/invite-participant",
+      "handler": "clinicians.inviteParticipant",
+      "config": {
+        "policies": ["plugins::users-permissions.userValidation"]
+      }
+    }
+  ]
+}

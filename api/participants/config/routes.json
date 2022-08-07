@@ -1,0 +1,77 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/participants",
+      "handler": "participants.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/participants/count",
+      "handler": "participants.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/participants/:id",
+      "handler": "participants.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/participants",
+      "handler": "participants.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/participants/updateProfile",
+      "handler": "participants.update",
+      "config": {
+        "policies": ["plugins::users-permissions.userValidation"]
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/participants/:id",
+      "handler": "participants.delete",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/getGroupInvites",
+      "handler": "participants.getGroupInvites",
+      "config": {
+        "policies": ["plugins::users-permissions.userValidation"]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/answerInvite",
+      "handler": "participants.answerInvite",
+      "config": {
+        "policies": ["plugins::users-permissions.userValidation"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/getActiveGroup",
+      "handler": "participants.getActiveGroup",
+      "config": {
+        "policies": ["plugins::users-permissions.userValidation"]
+      }
+    }
+    
+  ]
+}

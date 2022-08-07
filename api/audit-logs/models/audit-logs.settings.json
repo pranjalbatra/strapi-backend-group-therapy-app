@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "audit_logs",
+  "info": {
+    "name": "audit_logs"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "event_timestamp": {
+      "type": "datetime"
+    },
+    "event_name": {
+      "type": "string"
+    },
+    "users_permissions_user": {
+      "via": "audit_logs",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "environment": {
+      "type": "enumeration",
+      "enum": [
+        "development",
+        "production"
+      ],
+      "default": "development"
+    },
+    "details": {
+      "type": "text"
+    }
+  }
+}
